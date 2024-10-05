@@ -1,136 +1,115 @@
 <!doctype html>
-<html>
-
- 
 <html onload="winw()">
-  <head onload="winl()"><meta name="viewport" content="width=device-width,user-scalable=no">
-
-
-
-<head>
-
-<meta charset="utf-8">
-<title>SPIN GAME </title>
-<style>
-
-@import url("https://fonts.googleapis.com/css?family=Raleway:400,400i,700");
-@import url('https://fonts.googleapis.com/css?family=Nunito');
-html{background:linear-gradient(90deg,#fff000 0%,#ff0000 100%);
-}
-body{
-  background:linear-gradient(90deg,#fff000 0%,#ff0000 100%);
-background-repeat:no-repeat;
-
-}
-#yl,#yw,#pl{
-  color:green;
-   font-family:Raleway;
-font-size:35px;
-  text-align:center;
-  border-radius:5px;
-  display:none;
-  background:#FF3D00;
-}
-#pl{
-  color:red;
-  background:#7CB342;
-}
-#spin{
-  transform-origin: center;
-   z-index: 2;
-    position: absolute;
-    top: 300px;
-    left: 8px;
-  transform: translateZ(0px) rotate(-0.533286rad);
-  margin-top:30px;
-  margin-left:30%;
-}
-input{border:0;
-   font-family:Raleway;
-background:transparent;
-width:150px;
-font-size:35px;
-color:red;
-}
-.cne{background:green;
-width:120px;
-height:120px;
-border-radius:50%;
- margin:auto;
-  margin-top:80px;
-}
-.cne::before{
- 
-  content:' ;
-  background:red;
- margin:auto;
-  width:540px;
-  height:540px;
-  border-radius:50%
- 
-}
-  /* -webkit-transform: rotate(3109deg);
-   -moz-transform: rotate(3109deg);
-   -o-transform: rotate(3109deg);
-   transform: rotate(3109deg);
-  /*background:url("https://upload.wikimedia.org/wikipedia/commons/f/f3/Fidget_spinner_red%2C_cropped.jpg ");
-  */
- 
-
-#sc1,#sc2,#sc3{
-  font-family:Raleway;
-  font-size:35px;
-  background:#004D40;
-width:100%;
-box-shadow:0px 10px 0px #aaa;
-}
-#pro{
-  background:#991;
-  width:80%;
-  height:25px;
-  margin-left:78px;
- 
-}
-#prog{
-  background:#f80;
-  width:0;
-  height:100%;
-   transition:.5s;
- 
-}
-#ref{
-  background:#333;
-  color:white;
-  font-family:cursive;
-  position:absolute;
-  top:55px;
-  left:13px;
-  transition:1.5s;
-}
-#ref:hover{background:#D32F2F;}
-#sc1:active,#sc2:active,#sc3:active{
-  transform:translateY(1px);
- box-shadow:0px 7px 0px #aaa;
- 
-}
-.nospin{
--webkit-animation: none 2s ;
--moz-animation: none 2s ;
--o-animation: none 2s ;
-animation: none 2s ;
-}
-@-webkit-keyframes none {}
-@-moz-keyframes none {}
-@-o-keyframes none {}
-@keyframes none {}
-.nam{
-  text-align:center;
-  font-family:Nunito;
-  position:fixed;
-  font-size:35px;
-  margin-left:249px;
-}
-.spinAround {
+  <head onload="winl()">
+    <meta name="viewport" content="width=device-width,user-scalable=no">
+    <meta charset="utf-8">
+    <title>SPIN GAME</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css?family=Raleway:400,400i,700");
+      @import url('https://fonts.googleapis.com/css?family=Nunito');
+      html {
+        background: linear-gradient(90deg,#fff000 0%,#ff0000 100%);
+      }
+      body {
+        background: linear-gradient(90deg,#fff000 0%,#ff0000 100%);
+        background-repeat: no-repeat;
+      }
+      #yl, #yw, #pl {
+        color: green;
+        font-family: Raleway;
+        font-size: 35px;
+        text-align: center;
+        border-radius: 5px;
+        display: none; /* Hidden initially */
+        background: #FF3D00;
+      }
+      #pl {
+        color: red;
+        background: #7CB342;
+      }
+      #spin {
+        transform-origin: center;
+        z-index: 2;
+        position: absolute;
+        top: 300px;
+        left: 8px;
+        transform: translateZ(0px) rotate(-0.533286rad);
+        margin-top: 30px;
+        margin-left: 30%;
+      }
+      input {
+        border: 0;
+        font-family: Raleway;
+        background: transparent;
+        width: 150px;
+        font-size: 35px;
+        color: red;
+      }
+      .cne {
+        background: green;
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        margin: auto;
+        margin-top: 80px;
+      }
+      .cne::before {
+        content: ' ';
+        background: red;
+        margin: auto;
+        width: 540px;
+        height: 540px;
+        border-radius: 50%;
+      }
+      #sc1, #sc2, #sc3 {
+        font-family: Raleway;
+        font-size: 35px;
+        background: #004D40;
+        width: 100%;
+        box-shadow: 0px 10px 0px #aaa;
+      }
+      #pro {
+        background: #991;
+        width: 80%;
+        height: 25px;
+        margin-left: 78px;
+      }
+      #prog {
+        background: #f80;
+        width: 0;
+        height: 100%;
+        transition: .5s;
+      }
+      #ref {
+        background: #333;
+        color: white;
+        font-family: cursive;
+        position: absolute;
+        top: 55px;
+        left: 13px;
+        transition: 1.5s;
+      }
+      #ref:hover {
+        background: #D32F2F;
+      }
+      #sc1:active, #sc2:active, #sc3:active {
+        transform: translateY(1px);
+        box-shadow: 0px 7px 0px #aaa;
+      }
+      .nospin {
+        -webkit-animation: none 2s;
+        -moz-animation: none 2s;
+        -o-animation: none 2s;
+        animation: none 2s;
+      }
+      .nam {
+        text-align: center;
+        font-family: Nunito;
+        position: fixed;
+        font-size: 35px;
+        margin-left: 249px;
+      }
+      .spinAround {
         -webkit-animation: spin 6.6s;
         -moz-animation: spin 6.6s;
         -o-animation: spin 6.6s;
@@ -150,242 +129,120 @@ animation: none 2s ;
         -webkit-animation-fill-mode: forwards;
         -moz-animation-fill-mode: forwards;
         -o-animation-fill-mode: forwards;
-        animation-fill-mode: forwards
-    }
-    @-webkit-keyframes spin {
+        animation-fill-mode: forwards;
+      }
+      @-webkit-keyframes spin {
         0% {
-            -webkit-transform: rotate(0deg);
-            transform: rotate(0deg)
+          -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
         }
         90% {
-            -webkit-transform: rotate(3110deg);
-            transform: rotate(3110deg)
+          -webkit-transform: rotate(3110deg);
+          transform: rotate(3110deg);
         }
         95% {
-            -webkit-transform: rotate(3108deg);
-            transform: rotate(3108deg)
+          -webkit-transform: rotate(3108deg);
+          transform: rotate(3108deg);
         }
         100% {
-            -webkit-transform: rotate(3109deg);
-            transform: rotate(3109deg)
+          -webkit-transform: rotate(3109deg);
+          transform: rotate(3109deg);
         }
-    }
-    @-moz-keyframes spin {
-        0% {
-            -moz-transform: rotate(0deg);
-            transform: rotate(0deg)
-        }
-        90% {
-            -moz-transform: rotate(3110deg);
-            transform: rotate(3110deg)
-        }
-        95% {
-            -moz-transform: rotate(3108deg);
-            transform: rotate(3108deg)
-        }
-        100% {
-            -moz-transform: rotate(3109deg);
-            transform: rotate(3109deg)
-        }
-    }
-    @-o-keyframes spin {
-        0% {
-            -o-transform: rotate(0deg);
-            transform: rotate(0deg)
-        }
-        90% {
-            -o-transform: rotate(3110deg);
-            transform: rotate(3110deg)
-        }
-        95% {
-            -o-transform: rotate(3108deg);
-            transform: rotate(3108deg)
-        }
-        100% {
-            -o-transform: rotate(3109deg);
-            transform: rotate(3109deg)
-        }
-    }
-    @keyframes spin {
-        0% {
-            -webkit-transform: rotate(0deg);
-            -moz-transform: rotate(0deg);
-            -o-transform: rotate(0deg);
-            transform: rotate(0deg)
-        }
-        90% {
-            -webkit-transform: rotate(3110deg);
-            -moz-transform: rotate(3110deg);
-            -o-transform: rotate(3110deg);
-            transform: rotate(3110deg)
-        }
-        95% {
-            -webkit-transform: rotate(3108deg);
-            -moz-transform: rotate(3108deg);
-            -o-transform: rotate(3108deg);
-            transform: rotate(3108deg)
-        }
-        100% {
-            -webkit-transform: rotate(3109deg);
-            -moz-transform: rotate(3109deg);
-            -o-transform: rotate(3109deg);
-            transform: rotate(3109deg)
-        }
-    }
- 
-</style>
-
-</head>
-<body>
-
-<html>
-
-<html onload="winw()">
-  <head onload="winl()"><meta name="viewport" content="width=device-width,user-scalable=no"></head>
-  <body onload="fsc()"  >
- <a href=" https://bet32.github.io/live3/ ">
-
-<div class="nam">BET </div>
-
-</a>
- 
-  SPIN TO WIN $10,$20, $50, $100
-  <br>  <br>  <br>  <br>
-  <div id="scrd">
-   
-   
-     <div id="sc1">
-  SCORE :<input value="00"  type="text" id="scr" readonly> <br> </div>
- 
- 
-   <div id="sc2">
-     Spin-Left:<input value="2" type="text" id="chnl" readonly> <br> </div>
- 
-   <div id="sc3">
-   POINT:<input type="text" id="scrf" readonly> <br> </div>
-   
-   
+      }
+      /* Added bold style for the "Click here" text */
+      #winLink {
+        font-weight: bold;
+        text-align: center;
+        display: block;
+        font-size: 20px;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body onload="fsc()">
+    <a href="https://bet32.github.io/live3/">
+      <div class="nam">BET</div>
+    </a>
+    SPIN TO WIN $10, $20, $50, $100
+    <br><br><br><br>
+    <div id="scrd">
+      <div id="sc1">
+        SCORE: <input value="00" type="text" id="scr" readonly><br>
+      </div>
+      <div id="sc2">
+        Spin-Left: <input value="2" type="text" id="chnl" readonly><br>
+      </div>
+      <div id="sc3">
+        POINT: <input type="text" id="scrf" readonly><br>
+      </div>
     </div>
-  <br>  <br>  <br>
+    <br><br><br>
     <div id="pro">
-      <div id="prog"></div></div> <br>
-   
-   
-   
-   
-     
-    <img id="spin" onclick="startSpin()" src="https://upload.wikimedia.org/wikipedia/commons/f/f3/Fidget_spinner_red%2C_cropped.jpg " spin alt="SPIN THE ROBOT" height="226" width="207">
-   
-
-   
-   
-   
-   
-   
-   
-   <div id="yl">LOST</div><br>
-	
-    <a href="https://bet32.github.io/live2/ ">  	
-    <div id="pl" onclick="ply()">PLAY AGAIN</div><br>
-</a>
-
-
-
-   
-<div id="yw">WON</div>
-
-
-
-
-
+      <div id="prog"></div>
+    </div><br>
+    <img id="spin" onclick="startSpin()" src="https://upload.wikimedia.org/wikipedia/commons/f/f3/Fidget_spinner_red%2C_cropped.jpg" spin alt="SPIN THE ROBOT" height="226" width="207">
+    <div id="yl">LOST</div><br>
+    <a href="https://bet32.github.io/live2/">
+      <div id="pl" onclick="ply()">START OVER</div><br>
+    </a>
+    <div id="yw">WON</div>
+    <a id="winLink" href="https://chat.whatsapp.com/EQWq4QF37cN6ueXx8VwoAo " style="display:none">Click here</a> <!-- Added bold "Click here" link -->
   </body>
 </html>
-   
-
 
 <script language="javascript" type="text/javascript">
+var cnt = 3;
 
-
-var cnt=3;
 function startSpin() {
-        var e = document.getElementById("spin");
-		
-	
-
-	//every element has an id and is put in the document.get element bracket ,
-	//so to add an event handler on an element you declare the element as a variable and add dot onclick or the action 
-//also 	if you put the attribute of the element in the document.get element 
-//you assign it to the element by declaring it as a variable using var
-	
-		 //example var hi_button = document.getElementById("say_hi");
-	//	 hi_button.onclick = (name of the program or the form the button is on it)
-		 
-        e.className = "spinAround";
-  cnt=cnt-1;
-  document.getElementById("chnl").value=cnt;
-  setTimeout(function() {
-          document.getElementById("spin").className = "nospin";
-     ;
-     
-          document.getElementById("scr").value=parseInt( document.getElementById("scr").value) + parseInt(Math.floor(Math.random() * 15 + 1));
-        }, 6500)
-}
-function fsc(){
-  var t=document.getElementById("scrf");
-  t.value=Math.floor(Math.random() * 30 + 1);
- 
+    var e = document.getElementById("spin");
+    e.className = "spinAround";
+    cnt = cnt - 1;
+    document.getElementById("chnl").value = cnt;
+    setTimeout(function () {
+        document.getElementById("spin").className = "nospin";
+        document.getElementById("scr").value = parseInt(document.getElementById("scr").value) + parseInt(Math.floor(Math.random() * 15 + 1));
+    }, 6500);
 }
 
-
-setInterval(winl,10);
-function winl(){
-  if(cnt==0){
-     document.getElementById("pl").style.display="block";
-    document.getElementById("yl").style.display="block";
-    document.getElementById("spin").style.display="none";
-  }
- 
+function fsc() {
+    var t = document.getElementById("scrf");
+    t.value = Math.floor(Math.random() * 30 + 1);
 }
-setInterval(winw,50);
-function winw(){
- if(parseInt(document.getElementById("scr").value)==parseInt(document.getElementById("scrf").value))
-  {
-     document.getElementById("yw").style.display="block";
-    document.getElementById("spin").style.display="none";
-    document.getElementById("pl").style.display="block";
-  }
- 
+
+setInterval(winl, 10);
+function winl() {
+    if (cnt == 0) { // Only show "Play again" when the user has no spins left
+        document.getElementById("pl").style.display = "block";
+        document.getElementById("yl").style.display = "block";
+        document.getElementById("spin").style.display = "none";
+    }
 }
-function ply(){
-  document.getElementById("scr").value=1;
-  var tt=document.getElementById("scrf");
-  tt.value=Math.floor(Math.random() * 0 + 0);
-  cnt=2;
- document.getElementById("yw").style.display="none";
-  document.getElementById("yl").style.display="none";
-   document.getElementById("chnl").value=cnt; document.getElementById("spin").style.display="block";
-  document.getElementById("pl").style.display="none";
+
+setInterval(winw, 50);
+function winw() {
+    if (parseInt(document.getElementById("scr").value) == parseInt(document.getElementById("scrf").value)) {
+        document.getElementById("yw").style.display = "block"; // Show "WON"
+        document.getElementById("spin").style.display = "none"; // Hide the spinner
+        document.getElementById("winLink").style.display = "block"; // Show "Click here" link in bold
+        document.getElementById("pl").style.display = "none"; // Hide "Play again"
+        document.getElementById("yl").style.display = "none"; // Hide "LOST" text when won
+    }
 }
-setInterval(pr,50);
-function pr(){
-  document.getElementById("prog").style.width=parseInt(document.getElementById("scr").value)/parseInt(document.getElementById("scrf").value)*100 + "%";
 
+function ply() {
+    document.getElementById("scr").value = 1;
+    var tt = document.getElementById("scrf");
+    tt.value = Math.floor(Math.random() * 0 + 0);
+    cnt = 2;
+    document.getElementById("yw").style.display = "none";
+    document.getElementById("yl").style.display = "none";
+    document.getElementById("chnl").value = cnt;
+    document.getElementById("spin").style.display = "block";
+    document.getElementById("pl").style.display = "none";
 }
-/*document.getElementById("scr").value< document.getElementById("scrf").value*/
 
-
-
-
--->
+setInterval(pr, 50);
+function pr() {
+    document.getElementById("prog").style.width = (parseInt(document.getElementById("scr").value) / parseInt(document.getElementById("scrf").value) * 100) + "%";
+}
 </script>
-
-
-
-</body>
-</html>
-
-
-
-
-
-
